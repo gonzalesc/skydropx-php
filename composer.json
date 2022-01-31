@@ -1,0 +1,22 @@
+{
+  "name": "gonzalesc/skydropx-php",
+  "description": "Cliente Skydropx API para PHP",
+  "keywords": ["skydropx", "client", "api", "php", "shipping", "woocommerce"],
+  "homepage": "https://www.skydropx.com/",
+  "type": "library",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Gonzalesc",
+      "homepage": "https://github.com/gonzalesc/skydropx-php/contributors"
+    }
+  ],
+
+  "require": {
+    "php": ">=5.3.3",
+    "rmccue/requests": ">=1.0"
+  },
+  "autoload": {
+    "classmap": ["lib/Skydropx/"]
+  }
+}
