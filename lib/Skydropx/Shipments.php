@@ -16,7 +16,7 @@ class Shipments extends Resource {
 	 *
 	 * @return post an order.
 	 */
-	public function create( $options = NULL ) {
-		return $this->request( "POST", self::URL_SHIPMENTS, $this->skydropx->GetAccess(), $options );
+	public function create( $data = NULL ) {
+		return $this->request( "POST", self::URL_SHIPMENTS, $this->skydropx->GetAccess(), $data );
 	}
 }
