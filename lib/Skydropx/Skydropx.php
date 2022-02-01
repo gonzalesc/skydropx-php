@@ -22,14 +22,15 @@ class Skydropx {
 	 *
 	 * @throws Error\InvalidOptions
 	 *
-	 * @example array('api' => "{api}",
-	 *					'mode' => "{mode}",
-	 *				)
+	 * @example array(
+	 *          	'api_key' => "{api_key}",
+	 *				'mode' => "{mode}",
+	 *			)
 	 */
 	public function __construct( $access ) {
 		
 		$this->access = (object) $access;
-		if ( ! isset( $this->access->api ) ||
+		if ( ! isset( $this->access->api_key ) ||
 			! isset( $this->access->mode )
 		) {
 		  throw new Errors\InvalidOptions();
@@ -40,17 +41,6 @@ class Skydropx {
 			case 'live' : $this->access->url = $this->url_live . $this->$version; break;
 			default 	: $this->access->url = $this->url_test . $this->$version;
 		}
-
-		/*$this->Users = new Users( $this );
-		$this->Products = new Products($this);
-		$this->Deltas = new Deltas( $this );
-		$this->Families = new Families( $this );
-		$this->Warehouses = new Warehouses( $this );
-		$this->Categories = new Categories( $this );
-		$this->Brands = new Brands( $this );
-		$this->Prices = new Prices( $this );
-		$this->Orders = new Orders( $this );
-		$this->Vouchers = new Vouchers( $this );*/
 
 		$this->Shipments = new Shipments( $this );
 	}

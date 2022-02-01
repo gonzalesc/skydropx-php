@@ -10,13 +10,13 @@ use Skydropx\Error as Errors;
  * @package Skydropx
  */
 class Client {
-	public function request($method, $path, $access, $data = NULL) {
+	public function request( $method, $path, $access, $data = NULL) {
 		try {
 
 			$url = $access->url . $path;
 			
 			$headers = [
-				'Authorization'		=> sprintf( 'Bearer %s', $access->api ),
+				'Authorization'		=> sprintf( 'Bearer %s', $access->api_key ),
 				'Content-Type'		=> 'application/json',
 				'Accept'			=> 'application/json',
 				'Accept-Encoding'	=> '*',
