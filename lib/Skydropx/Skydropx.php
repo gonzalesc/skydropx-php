@@ -38,8 +38,8 @@ class Skydropx {
 
 		// URL access
 		switch( $this->access->mode ) {
-			case 'live' : $this->access->url = $this->url_live . $this->$version; break;
-			default 	: $this->access->url = $this->url_test . $this->$version;
+			case 'live' : $this->access->url = $this->url_live . $this->version; break;
+			default 	: $this->access->url = $this->url_test . $this->version;
 		}
 
 		$this->Shipments = new Shipments( $this );
