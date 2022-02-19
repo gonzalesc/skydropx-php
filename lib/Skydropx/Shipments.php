@@ -12,6 +12,15 @@ class Shipments extends Resource {
 	const URL_SHIPMENTS = "/shipments";
 
 	/**
+	 * @param array|null $options
+	 *
+	 * @return get customers.
+	 */
+	public function get( $id = NULL ) {
+		return $this->request( "GET", self::URL_SHIPMENTS.'/'.$id, $this->skydropx->GetAccess() );
+	}
+
+	/**
 	 * @param string|null $id
 	 *
 	 * @return post an order.
