@@ -42,8 +42,12 @@ class Skydropx {
 			default 	: $this->access->url = $this->url_test . $this->version;
 		}
 
-		$this->Shipments 	= new Shipments( $this );
-		$this->Labels 		= new Labels( $this );
+		$this->Shipments 			= new Shipments( $this );
+		$this->Labels 				= new Labels( $this );
+		$this->NotesCategories 		= new NotesCategories( $this );
+		$this->NotesSubcategories	= new NotesSubcategories( $this );
+		$this->NotesClasses			= new NotesClasses( $this );
+		$this->NotesPackagings 		= new NotesPackagings( $this );
 	}
 
 	public function GetAccess() {
