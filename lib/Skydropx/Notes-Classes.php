@@ -9,7 +9,7 @@ namespace Skydropx;
  */
 class NotesClasses extends Resource {
 
-	const URL_NOTES_CLASSES = "consignment_notes/subcategories/%d/classes";
+	const URL_NOTES_CLASSES = "/consignment_notes/subcategories/%d/classes";
 
 	/**
 	 * @param array|null $options
